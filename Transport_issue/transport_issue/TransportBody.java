@@ -46,7 +46,6 @@ public class TransportBody implements ActionListener{
 	JTextArea output = new JTextArea("");
 	
 	
-	
 	public TransportBody() {
 		body.setVisible(true);
 		body.setSize(700, 700);
@@ -89,14 +88,43 @@ public class TransportBody implements ActionListener{
 		
 	}
 
-
+	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		int Row12P = Integer.parseInt(Row12.getText());
+		int Row22P = Integer.parseInt(Row22.getText());
+		int Row32P = Integer.parseInt(Row32.getText());
+		int Row42P = Integer.parseInt(Row42.getText());
+		int Row52P = Integer.parseInt(Row52.getText());
+		int Row62P = Integer.parseInt(Row62.getText());
+		int x11P = Integer.parseInt(x11.getText());
+		int x12P = Integer.parseInt(x12.getText());
+		int x13P = Integer.parseInt(x13.getText());
+		int x21P = Integer.parseInt(x21.getText());
+		int x22P = Integer.parseInt(x22.getText());
+		int x23P = Integer.parseInt(x23.getText());
+		int x31P = Integer.parseInt(x31.getText());
+		int x32P = Integer.parseInt(x32.getText());
+		int x33P = Integer.parseInt(x33.getText());
 		
-		String x11P = x11.getText();
-		output.append(x11P);
+		
+		for(int i=0; Row12P<=0 && Row22P<=0 && Row32P<=0 && Row42P<=0 && Row52P<=0 && Row62P<=0; i++) {
+			
+			int firstComparision = Math.min(x11P, x12P);
+			int secondComparision = Math.min(x13P, x21P);
+			int thirdComparision = Math.min(x22P, x23P);
+			int fourthComparision = Math.min(x31P, x32P);
+			int fifthComparision = Math.min(firstComparision, secondComparision);
+			int sixthComparision = Math.min(thirdComparision, fourthComparision);
+			int seventhComparision = Math.min(fifthComparision, sixthComparision);
+			int eighthComparision = Math.min(seventhComparision, x33P);
+			
+			
+		}
+		
+		
 		
 	}
 
